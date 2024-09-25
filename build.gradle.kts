@@ -1,11 +1,22 @@
-defaultTasks("run")
 
-tasks.register("run") {
-    dependsOn(gradle.includedBuild("my-app").task(":app:run"))
+plugins {
+    base
 }
 
-tasks.register("checkAll") {
-    dependsOn(gradle.includedBuild("my-app").task(":app:check"))
-    dependsOn(gradle.includedBuild("my-utils").task(":number-utils:check"))
-    dependsOn(gradle.includedBuild("my-utils").task(":string-utils:check"))
+val aggregateTasks = listOf("clean", "build", "assemble", "check")
+
+tasks {
+    aggregateTasks.forEach { taskName ->
+        named(taskName).configure {
+            dependsOn(
+                getTasksByName(taskName, true).filter { it != this@configure },
+            )
+        }
+
+        named(taskName).configure {
+            dependsOn(
+                gradle.includedBuilds.map { it.task(":$taskName") }
+            )
+        }
+    }
 }

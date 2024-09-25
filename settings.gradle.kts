@@ -1,4 +1,8 @@
-rootProject.name = "my-composite"
+rootProject.name = "gradle-composite-sample"
 
-includeBuild("my-app")
-includeBuild("my-utils")
+includeBuild("platform")
+includeBuild("monolith")
+
+includeBuild("systems/system-a")
+includeBuild("systems/system-b")
+includeBuild("systems/frontend")

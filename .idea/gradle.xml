@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/systems/frontend" name="frontend">
+                <projects>
+                  <project path="$PROJECT_DIR$/systems/frontend" />
+                  <project path="$PROJECT_DIR$/systems/frontend/server" />
+                  <project path="$PROJECT_DIR$/systems/frontend/webapp" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/systems/frontend/buildSrc" name="buildSrc">
+                <projects>
+                  <project path="$PROJECT_DIR$/systems/frontend/buildSrc" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/monolith" name="monolith">
+                <projects>
+                  <project path="$PROJECT_DIR$/monolith" />
+                  <project path="$PROJECT_DIR$/monolith/api" />
+                  <project path="$PROJECT_DIR$/monolith/worker" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/platform" name="platform">
+                <projects>
+                  <project path="$PROJECT_DIR$/platform" />
+                  <project path="$PROJECT_DIR$/platform/number-utils" />
+                  <project path="$PROJECT_DIR$/platform/string-utils" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/systems/system-a" name="system-a">
+                <projects>
+                  <project path="$PROJECT_DIR$/systems/system-a" />
+                  <project path="$PROJECT_DIR$/systems/system-a/app" />
+                  <project path="$PROJECT_DIR$/systems/system-a/impl" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/systems/system-b" name="system-b">
+                <projects>
+                  <project path="$PROJECT_DIR$/systems/system-b" />
+                  <project path="$PROJECT_DIR$/systems/system-b/app" />
+                  <project path="$PROJECT_DIR$/systems/system-b/impl" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/monolith" />
+            <option value="$PROJECT_DIR$/monolith/api" />
+            <option value="$PROJECT_DIR$/monolith/worker" />
+            <option value="$PROJECT_DIR$/platform" />
+            <option value="$PROJECT_DIR$/platform/number-utils" />
+            <option value="$PROJECT_DIR$/platform/string-utils" />
+            <option value="$PROJECT_DIR$/systems/frontend" />
+            <option value="$PROJECT_DIR$/systems/frontend/buildSrc" />
+            <option value="$PROJECT_DIR$/systems/frontend/server" />
+            <option value="$PROJECT_DIR$/systems/frontend/webapp" />
+            <option value="$PROJECT_DIR$/systems/system-a" />
+            <option value="$PROJECT_DIR$/systems/system-a/app" />
+            <option value="$PROJECT_DIR$/systems/system-a/impl" />
+            <option value="$PROJECT_DIR$/systems/system-b" />
+            <option value="$PROJECT_DIR$/systems/system-b/app" />
+            <option value="$PROJECT_DIR$/systems/system-b/impl" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

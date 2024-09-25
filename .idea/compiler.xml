@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.6">
+      <module name="my-app.app" target="17" />
+      <module name="my-app.app.main" target="17" />
+      <module name="my-app.app.test" target="17" />
+      <module name="my-utils.number-utils" target="17" />
+      <module name="my-utils.number-utils.main" target="17" />
+      <module name="my-utils.number-utils.test" target="17" />
+      <module name="my-utils.string-utils" target="17" />
+      <module name="my-utils.string-utils.main" target="17" />
+      <module name="my-utils.string-utils.test" target="17" />
+      <module name="org.sample.my-utils.number-utils.main" target="17" />
+      <module name="org.sample.my-utils.number-utils.test" target="17" />
+      <module name="org.sample.my-utils.string-utils.main" target="17" />
+      <module name="org.sample.my-utils.string-utils.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
