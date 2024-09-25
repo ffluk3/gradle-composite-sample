@@ -21,11 +21,6 @@ tasks {
         args = listOf("test")
     }
 
-    register<YarnTask>("dev") {
-        dependsOn("yarn")
-        args = listOf("dev")
-    }
-
     named("assemble") {
         dependsOn(yarnBuildTask)
     }

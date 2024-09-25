@@ -1,22 +1,19 @@
-
-plugins {
-    base
-}
-
-val aggregateTasks = listOf("clean", "build", "assemble", "check")
-
 tasks {
-    aggregateTasks.forEach { taskName ->
-        named(taskName).configure {
-            dependsOn(
-                getTasksByName(taskName, true).filter { it != this@configure },
-            )
+    register("buildAll") {
+        gradle.includedBuilds.forEach {
+            this.dependsOn(it.task(":build"))
         }
+    }
 
-        named(taskName).configure {
-            dependsOn(
-                gradle.includedBuilds.map { it.task(":$taskName") }
-            )
+    register("checkAll") {
+        gradle.includedBuilds.forEach {
+            this.dependsOn(it.task(":check"))
+        }
+    }
+
+    register("cleanAll") {
+        gradle.includedBuilds.forEach {
+            this.dependsOn(it.task(":check"))
         }
     }
 }
